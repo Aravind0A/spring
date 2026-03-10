@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel = "stylesheet" type="text/css" href="/css/style.css">
+	</head>
+	<body>
+		<h1 th:text="${heading}"></h1>
+		<h1 th:utext = "${hello}"></h1>
+		<div th:if = "${loggedIn}">
+			<h1>Welcome back, student!</h1>
+		</div>
+		<div th:if = "${!loggedIn}">
+			<h1>Please log in to access the lessons</h1>
+		</div>
+	</body>
+	

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+	</head>
+	<body>
+		<div th:text = "${movieTitle}"></div>
+		<div th:text = "${movieDescription}"></div>
+		<div th:if = "${loggedIn}">
+			<p th:text = "${movieFullDecription}"> 
+		</div>
+		<div th:if = "${!loggedIn}">
+			<p>Please log in to read the full movie description</p> 
+		</div>
+
+	</body>	
+</html>
