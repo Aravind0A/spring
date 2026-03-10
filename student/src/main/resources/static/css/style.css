@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com');
+
+body{
+	background-color: lightgreen;
+}
+h1{
+	text-align: center;
+	color: darkgray;
+	box-shadow: 0vh;
+	border-style: dotted;
+	font-family: cursive;
+	border-radius: 15px;
+	
+		
+}
+h1:hover{
+	background-color: yellow;
+
+}
