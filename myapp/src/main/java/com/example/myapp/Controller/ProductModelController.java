@@ -1,5 +1,7 @@
 package com.example.myapp.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,5 +44,16 @@ public class ProductModelController {
 	    model.addAttribute("productsmodel", productList);
 	    return "productsmodel";
 	}
+	
+	@GetMapping("/productname")
+	public String productDetails(Model model) {
+		
+		List<Object[]> nameAndPriceList = productRepository.findNameAndPrice();
+		model.addAttribute("nameAndPrice", nameAndPriceList);
+		return "productnameprice";
+	}
+	
+
+
 
 }

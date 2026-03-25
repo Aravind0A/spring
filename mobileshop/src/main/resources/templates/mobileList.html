@@ -1,0 +1,18 @@
+<html>
+<body>
+<table border="1">
+   <tr>
+     <th>Name</th>
+     <th>Brand</th>
+     <th>Price</th>
+	 <th>Type</th>
+   </tr>
+   <tr th:each="mobiles : ${mobileList}">
+      <td th:text="${mobiles.name}"></td>
+      <td th:text="${mobiles.brand}"></td>
+      <td th:text="${mobiles.price}"></td>
+	  <td th:text="${mobiles.type}"></td>
+   </tr>
+</table>
+</body>
+</html>
