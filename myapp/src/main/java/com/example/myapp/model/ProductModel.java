@@ -13,6 +13,7 @@ public class ProductModel {
 	public Integer id;
     private String name;
     private String description;
+    private String expirydate;
     private Float price;
 	public Integer getId() {
 		return id;
@@ -37,6 +38,12 @@ public class ProductModel {
 	}
 	public void setPrice(Float price) {
 		this.price = price;
+	}
+	public String getExpirydate() {
+		return expirydate;
+	}
+	public void setExpirydate(String expirydate) {
+		this.expirydate = expirydate;
 	}
     
     
