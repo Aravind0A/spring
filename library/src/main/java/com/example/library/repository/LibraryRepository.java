@@ -1,0 +1,9 @@
+package com.example.library.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.library.model.LibraryDetails;
+
+public interface LibraryRepository extends JpaRepository<LibraryDetails, Long> {
+
+}
