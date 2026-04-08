@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Company List</title>
+</head>
+<body>
+<h1>Company List</h1>
+<form action="#" th:action="@{/all}" method="get">
+    <input type="text" name="keyword" placeholder="Search by name or description" />
+    <input type="submit" value="Search" />
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="comp : ${company}">
+            <td th:text="${comp.id}"></td>
+            <td th:text="${comp.name}"></td>
+            <td th:text="${comp.email}"></td>
+            <td th:text="${comp.address}"></td>
+            <td>
+                
+				<a th:href="@{/pdf/{id}(id=${comp.id})}">Download Pdf</a>
+				<a th:href="@{/email/{id}(id=${comp.id})}">Send Email</a>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
